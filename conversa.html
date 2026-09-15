@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFM WhatsApp - Conversas</title>
+
+    <link rel="stylesheet" href="conversa.css">
+</head>
+
+<body>
+
+<main class="whatsapp">
+
+    <!-- =====================================================
+         LISTA DE CONTATOS
+    ====================================================== -->
+    <aside class="lista">
+
+        <header class="cabecalho-lista">
+
+            <div class="perfil-logado">
+
+                <img
+                    src="AFM00.jpg"
+                    alt="AFM"
+                    class="logo-afm">
+
+                <div>
+                    <strong id="usuario-logado">Usuário</strong>
+                    <small id="setor-logado">Setor: -</small>
+                </div>
+
+            </div>
+
+            <div class="acoes-lista">
+
+                <button
+                    type="button"
+                    id="btn-nova-conversa"
+                    title="Nova conversa">
+                    ✚
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-sair"
+                    title="Sair">
+                    🚪
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- PESQUISA -->
+        <div class="barra-pesquisa">
+
+            <input
+                type="search"
+                id="pesquisar-conversa"
+                placeholder="Pesquisar por nome ou setor"
+                autocomplete="off">
+
+            <button
+                type="button"
+                id="btn-pesquisar">
+                🔍
+            </button>
+
+        </div>
+
+        <div id="resultado-busca"></div>
+
+
+        <!-- =================================================
+             CONTATOS
+        ================================================== -->
+        <div id="lista-usuarios" class="lista-usuarios">
+
+
+            <button
+                type="button"
+                class="usuario ativo"
+                data-contato="DY"
+                data-setor="DY">
+
+                <span class="avatar">👤</span>
+
+                <span class="dados-usuario">
+                    <strong>DY</strong>
+                    <small>Setor: DY</small>
+                </span>
+
+                <span class="acoes-usuario">
+
+                    <span class="btn-apagar" title="Apagar contato">
+                        ✕
+                    </span>
+
+                    <span class="status-online">
+                        🟢
+                    </span>
+
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Câmera TI"
+                data-setor="Câmera TI">
+
+                <span class="avatar">📹</span>
+
+                <span class="dados-usuario">
+                    <strong>Câmera TI</strong>
+                    <small>Setor: Câmera TI</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="RH"
+                data-setor="RH">
+
+                <span class="avatar">👥</span>
+
+                <span class="dados-usuario">
+                    <strong>RH</strong>
+                    <small>Setor: RH</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Financeiro"
+                data-setor="Financeiro">
+
+                <span class="avatar">💰</span>
+
+                <span class="dados-usuario">
+                    <strong>Financeiro</strong>
+                    <small>Setor: Financeiro</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Equipe Manutenção"
+                data-setor="Manutenção">
+
+                <span class="avatar">🔧</span>
+
+                <span class="dados-usuario">
+                    <strong>Equipe Manutenção</strong>
+                    <small>Setor: Manutenção</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Supervisão"
+                data-setor="Supervisão">
+
+                <span class="avatar">👷</span>
+
+                <span class="dados-usuario">
+                    <strong>Supervisão</strong>
+                    <small>Setor: Supervisão</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Segurança"
+                data-setor="Segurança">
+
+                <span class="avatar">🛡️</span>
+
+                <span class="dados-usuario">
+                    <strong>Segurança</strong>
+                    <small>Setor: Segurança</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Portaria"
+                data-setor="Portaria">
+
+                <span class="avatar">🚪</span>
+
+                <span class="dados-usuario">
+                    <strong>Portaria</strong>
+                    <small>Setor: Portaria</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Almoxarife"
+                data-setor="Almoxarife">
+
+                <span class="avatar">📦</span>
+
+                <span class="dados-usuario">
+                    <strong>Almoxarife</strong>
+                    <small>Setor: Almoxarife</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Mecânica"
+                data-setor="Mecânica">
+
+                <span class="avatar">🔩</span>
+
+                <span class="dados-usuario">
+                    <strong>Mecânica</strong>
+                    <small>Setor: Mecânica</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Elétrica"
+                data-setor="Elétrica">
+
+                <span class="avatar">⚡</span>
+
+                <span class="dados-usuario">
+                    <strong>Elétrica</strong>
+                    <small>Setor: Elétrica</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Transportes"
+                data-setor="Transportes">
+
+                <span class="avatar">🚚</span>
+
+                <span class="dados-usuario">
+                    <strong>Transportes</strong>
+                    <small>Setor: Transportes</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="Administração"
+                data-setor="Administração">
+
+                <span class="avatar">🏢</span>
+
+                <span class="dados-usuario">
+                    <strong>Administração</strong>
+                    <small>Setor: Administração</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="usuario"
+                data-contato="TI – Tecnologia da Informação"
+                data-setor="Tecnologia">
+
+                <span class="avatar">💻</span>
+
+                <span class="dados-usuario">
+                    <strong>TI – Tecnologia da Informação</strong>
+                    <small>Setor: Tecnologia</small>
+                </span>
+
+                <span class="acoes-usuario">
+                    <span class="btn-apagar" title="Apagar contato">✕</span>
+                    <span class="status-online">🟢</span>
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONVERSA
+    ====================================================== -->
+
+    <section class="conversa">
+
+        <header class="cabecalho-conversa">
+
+            <div class="contato-info">
+
+                <div class="avatar-contato">
+                    👤
+                </div>
+
+                <div>
+
+                    <strong id="nome-contato">
+                        DY
+                    </strong>
+
+                    <small id="status-contato">
+                        🟢 Online
+                    </small>
+
+                    <small id="setor-contato">
+                        Setor: DY
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="acoes-conversa">
+
+                <button
+                    type="button"
+                    class="acao-topo"
+                    id="btn-video"
+                    title="Chamada de vídeo">
+                    📹
+                </button>
+
+                <button
+                    type="button"
+                    class="acao-topo"
+                    id="btn-ligacao"
+                    title="Chamada de áudio">
+                    📞
+                </button>
+
+                <button
+                    type="button"
+                    class="acao-topo"
+                    id="btn-compartilhar"
+                    title="Compartilhar tela">
+                    🖥️
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- MENSAGENS -->
+
+<div class="mensagens" id="mensagens">
+
+    <div class="mensagem enviada">
+
+        <div class="conteudo-mensagem">
+            oi
+        </div>
+
+        <time>
+            15:20
+            <span class="status-mensagem">✓✓</span>
+        </time>
+
+    </div>
+
+    <div class="mensagem recebida">
+
+        <div class="conteudo-mensagem">
+            oi
+        </div>
+
+        <time>15:21</time>
+
+    </div>
+
+</div>
+
+        <!-- EMOJIS -->
+
+        <div
+            id="painel-emoji"
+            class="painel-emoji"
+            hidden>
+
+            <button type="button">😀</button>
+            <button type="button">😂</button>
+            <button type="button">😍</button>
+            <button type="button">👍</button>
+            <button type="button">❤️</button>
+            <button type="button">👏</button>
+            <button type="button">🔥</button>
+            <button type="button">🎉</button>
+            <button type="button">😊</button>
+            <button type="button">😎</button>
+            <button type="button">🙏</button>
+            <button type="button">💪</button>
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+
+        <footer class="rodape-conversa">
+
+            <button
+                type="button"
+                class="icone"
+                id="btn-emoji">
+                😊
+            </button>
+
+           <button
+    type="button"
+    class="icone"
+    id="btn-anexo"
+    title="Anexar imagem ou vídeo">
+    📎
+</button>
+
+<input
+    type="file"
+    id="input-imagem-video"
+    accept="image/*,video/*"
+    hidden>
+
+    
+            <button
+                type="button"
+                class="icone"
+                id="btn-camera">
+                📷
+            </button>
+
+            <button
+                type="button"
+                class="icone"
+                id="btn-video-arquivo">
+                🎥
+            </button>
+
+          <button
+    type="button"
+    class="icone"
+    id="btn-audio">
+    🎤
+</button>
+
+<button
+    type="button"
+    class="icone"
+    id="btn-parar-audio"
+    hidden>
+    ⏹️
+</button>
+
+<button
+    type="button"
+    class="icone"
+    id="btn-enviar-audio"
+    hidden>
+    📤
+</button>
+
+
+
+
+            <textarea
+                id="mensagem"
+                rows="1"
+                placeholder="Digite uma mensagem"></textarea>
+
+            <button
+                type="button"
+                class="btn-enviar"
+                id="btn-enviar">
+                ➤
+            </button>
+
+            <input
+                type="file"
+                id="arquivo"
+                hidden
+                accept="image/*,video/*,.pdf,.doc,.docx,.xls,.xlsx,.txt">
+
+        </footer>
+
+    </section>
+
+<!-- =========================================================
+     MODAL — NOVA CONVERSA
+========================================================= -->
+<div id="modal-nova-conversa" class="modal" hidden>
+
+    <div class="modal-conteudo">
+
+        <button
+            type="button"
+            class="fechar-modal"
+            id="fechar-nova-conversa">
+            ✕
+        </button>
+
+        <h2>✚ Nova conversa</h2>
+
+        <!-- SETOR -->
+        <label for="select-setor-conversa">
+            Setor
+        </label>
+
+       <select id="select-setor-conversa">
+
+            <option value="">
+                Selecione o setor
+            </option>
+
+            <option value="Todos">Todos</option>
+            <option value="DY">DY</option>
+            <option value="Câmera TI">Câmera TI</option>
+            <option value="Tecnologia">Tecnologia TI</option>
+            <option value="Produção">Produção</option>
+            <option value="RH">RH</option>
+            <option value="Financeiro">Financeiro</option>
+            <option value="PCP">PCP</option>
+            <option value="Manutenção">Manutenção</option>
+            <option value="Supervisão">Supervisão</option>
+            <option value="Segurança">Segurança</option>
+            <option value="Portaria">Portaria</option>
+            <option value="Almoxarife">Almoxarife</option>
+            <option value="Mecânica">Mecânica</option>
+            <option value="Elétrica">Elétrica</option>
+            <option value="Administração">Administração</option>
+            <option value="Modelação">Modelação</option>
+            <option value="Sala de Encarregado">Sala de Encarregado</option>
+            <option value="Compras">Compras</option>
+            <option value="Contablidade">Contabilidade</option>
+            <option value="Controladoria">Controladoria</option>
+            <option value="Engenharia">Engenharia</option>
+            <option value="Expedição">Expedição</option>
+            <option value="Fiscal">Fiscal</option>
+            <option value="Gestão">Gestão</option>
+            <option value="informática">Informática</option>
+            <option value="Jurídico">Jurídico</option>
+            <option value="Logistica">Logística</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Qualidade">Qualidade</option>
+            <option value="Vendas">Vendas</option>
+            <option value="Comercial">Comercial</option>
+            <option value="Diretoria">Diretoria</option>
+            <option value="Serviços Gerais">Serviços Gerais</option>
+            <option value="Desenvolvimento">Desenvolvimento</option>
+            <option value="Projetos">Projetos</option>
+            <option value="Compras e Suprimentos">
+                Compras e Suprimentos
+            </option>
+            <option value="Atendimento">Atendimento</option>
+            <option value="Meio Ambiente">Meio Ambiente</option>
+            <option value="Laboratório">Laboratório</option>
+            <option value="Usinagem">Usinagem</option>
+            <option value="Corte">Corte</option>
+            <option value="Solda">Solda</option>
+            <option value="Manutenção industrial">
+                Manutenção industrial
+            </option>
+            <option value="Manutenção Elétrica">
+               
+                
+                
+            </option>
+            <option value="Manutenção Mecânica">
+                Manutenção Mecânica
+            </option>
+            <option value="ambulatorio">Ambulatório</option>
+
+        </select>
+
+
+        <!-- CONTATO -->
+        <label for="select-contato-conversa">
+            Contato
+        </label>
+
+        <select id="select-contato-conversa" disabled>
+
+            <option value="">
+                Primeiro selecione o setor
+            </option>
+
+        </select>
+
+
+        <!-- ABRIR -->
+        <button
+            type="button"
+            id="abrir-nova-conversa"
+            disabled>
+            💬 Abrir conversa
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- =====================================================
+         MODAL MÍDIA
+    ====================================================== -->
+
+    <div
+        id="modal-midia"
+        class="modal"
+        hidden>
+
+        <div class="modal-midia-conteudo">
+
+            <button
+                type="button"
+                id="fechar-midia"
+                class="fechar-modal">
+                ✕ Fechar
+            </button>
+
+            <div
+                id="visualizador-midia"
+                class="visualizador-midia">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CHAMADA DE VÍDEO
+    ====================================================== -->
+
+    <section
+        id="tela-video"
+        class="tela-chamada-video"
+        hidden>
+
+        <header class="cabecalho-video">
+
+            <div class="titulo-chamada">
+
+                <strong id="nome-video-contato">
+                    📹 Chamada de vídeo
+                </strong>
+
+                <small id="setor-video-contato">
+                    Setor: -
+                </small>
+
+            </div>
+
+            <button
+                type="button"
+                id="fechar-video"
+                title="Fechar chamada">
+                ✕
+            </button>
+
+        </header>
+
+
+        <div class="layout-chamada-video">
+
+
+            <!-- =============================================
+                 TELA DE COMPARTILHAMENTO
+            ============================================== -->
+
+            <div
+                class="tela-compartilhamento"
+                id="area-compartilhamento">
+
+                <video
+                    id="video-tela"
+                    class="video-tela"
+                    autoplay
+                    playsinline
+                    hidden>
+                </video>
+
+                <div
+                    id="placeholder-compartilhamento"
+                    class="placeholder-compartilhamento">
+
+                    <div class="icone-compartilhamento">
+                        🖥️
+                    </div>
+
+                    <strong>
+                        TELA DE COMPARTILHAMENTO
+                    </strong>
+
+                    <small>
+                        Aguardando compartilhamento de tela...
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 COLUNA DOS PARTICIPANTES
+            ============================================== -->
+
+            <div class="coluna-participantes">
+
+
+                <!-- PARTICIPANTE -->
+
+                <div
+                    class="video-participante"
+                    id="card-video-participante">
+
+                    <video
+                        id="video-participante"
+                        class="video-remoto"
+                        autoplay
+                        playsinline
+                        hidden>
+                    </video>
+
+                    <div
+                        id="avatar-video-contato"
+                        class="avatar-video-remoto">
+                        👤
+                    </div>
+
+                    <div class="dados-participante">
+
+                        <strong id="nome-participante-video">
+                            Participante
+                        </strong>
+
+                        <small id="setor-participante-video">
+                            Setor: -
+                        </small>
+
+                        <span id="status-participante-video">
+                            🟢 Conectado
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VOCÊ -->
+
+                <div
+                    class="video-participante video-voce"
+                    id="card-video-voce">
+
+                    <video
+                        id="video-camera"
+                        class="video-camera"
+                        autoplay
+                        muted
+                        playsinline>
+                    </video>
+
+                    <div
+                        id="video-camera-placeholder"
+                        class="avatar-video-voce">
+                        👤
+                    </div>
+
+                    <div class="dados-participante">
+
+                        <strong>
+                            VOCÊ
+                        </strong>
+
+                        <small id="setor-video-voce">
+                            Setor: Todos
+                        </small>
+
+                        <span id="status-video-voce">
+                            🟢 Conectado
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="video-mensagem"
+            class="video-mensagem"
+            hidden>
+            Aguardando vídeo do participante...
+        </div>
+
+
+        <!-- CONTROLES -->
+
+        <footer class="controles-video">
+
+            <button
+                type="button"
+                id="btn-camera-video"
+                title="Câmera">
+                📷
+            </button>
+
+            <button
+                type="button"
+                id="btn-microfone-video"
+                title="Microfone">
+                🎤
+            </button>
+
+            <button
+                type="button"
+                id="btn-compartilhar-video"
+                title="Compartilhar tela">
+                🖥️
+            </button>
+
+            <button
+                type="button"
+                id="btn-desligar-video"
+                class="btn-desligar"
+                title="Encerrar">
+                📞
+            </button>
+
+        </footer>
+
+    </section>
+
+
+    <!-- =====================================================
+         CHAMADA DE ÁUDIO
+    ====================================================== -->
+
+    <section
+        id="tela-ligacao"
+        class="tela-ligacao"
+        hidden>
+
+        <div class="ligacao-conteudo">
+
+            <div class="avatar-ligacao">
+                👤
+            </div>
+
+            <h2 id="nome-ligacao-contato">
+                DY
+            </h2>
+
+            <p id="titulo-ligacao">
+                Chamada de áudio
+            </p>
+
+            <span id="setor-ligacao">
+                Setor: DY
+            </span>
+
+            <strong id="status-ligacao">
+                🟢 Conectado
+            </strong>
+
+            <div class="controles-ligacao">
+
+                <button
+                    type="button"
+                    id="btn-microfone-ligacao">
+                    🎤
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-desligar-ligacao"
+                    class="btn-desligar">
+                    📞
+                </button>
+
+            </div>
+
+            <button
+                type="button"
+                id="fechar-ligacao"
+                class="fechar-ligacao">
+                ✕ Fechar
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="conversa.js"></script>
+
+</body>
+</html>

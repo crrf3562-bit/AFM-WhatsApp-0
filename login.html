@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AFM WhatsApp - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<main class="login-container">
+
+    <section class="login-box">
+
+        <div class="logo-area">
+
+            <img
+                src="AFM00.jpg"
+                alt="AFM"
+                class="logo-afm"
+            >
+
+            <h1>AFM WhatsApp</h1>
+
+            <p>🏭 Acearia Frederico Missner</p>
+
+        </div>
+
+
+        <form id="form-login">
+
+            <div class="campo">
+
+                <label for="nome">
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="usuario">
+                    Usuário
+                </label>
+
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Digite seu usuário"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="setor">
+                    Setor
+                </label>
+
+                <select
+                    id="setor"
+                    name="setor"
+                    required
+                >
+
+                    <option value="">
+                        Selecione o setor
+                    </option>
+
+                    <option value="Todos">
+                        Todos
+                    </option>
+
+                    <option value="DY">
+                        DY
+                    </option>
+
+                    <option value="Câmera TI">
+                        Câmera TI
+                    </option>
+
+                    <option value="Tecnologia">
+                        Tecnologia  TI 
+                    </option>
+
+                    <option value="Produção">
+                        Produção
+                    </option>
+
+                    <option value="RH">
+                        RH
+                    </option>
+
+                    <option value="Financeiro">
+                        Financeiro
+                    </option>
+
+                    <option value="PCP">
+                        PCP
+                    </option>
+
+                    <option value="Manutenção">
+                        Manutenção
+                    </option>
+
+                    <option value="Supervisão">
+                        Supervisão
+                    </option>
+
+                    <option value="Segurança">
+                        Segurança
+                    </option>
+
+                    <option value="Portaria">
+                        Portaria
+                    </option>
+
+                    <option value="Almoxarife">
+                        Almoxarife
+                    </option>
+
+                    <option value="Mecânica">
+                        Mecânica
+                    </option>
+
+                    <option value="Elétrica">
+                        Elétrica
+                    </option>
+
+
+                    <option value="Administração">
+                        Administração
+                    </option>
+
+                    <option value="Modelação">
+                        Modelação 
+                    </option>
+
+                     <option value="Sala de Encarregado">
+                        Sala de  Encarregado
+                     </option>
+
+                     <option value="Compras">
+                        Compras
+                     </option>
+                        
+                     <option value="Contablidade">
+                        Contablidade
+                         </option>
+
+                        <option value="Controladoria">
+                            Controladoria
+                            </option>
+
+                             <option value="Rngenharia">
+                                Engenharia
+                                 </option>
+
+                              <option value="Expedição">
+                                Expedição 
+                              </option>  
+
+
+                          <option value="Fiscal">
+                                Fiscal
+                              </option>  
+
+                              <option value="Gestão">
+                                Gestão
+                              </option>  
+
+                              <option value="informática">
+                                informática
+                              </option>  
+
+                              <option value="Jurídico">
+                                Jurídico
+                              </option> 
+
+                              <option value="Logistica">
+                                Logistica
+                              </option>  
+
+                              <option value="Marketing">
+                                Marketing
+                              </option>  
+
+                              <option value="Qualidade">
+                                Qualidade
+                              </option>  
+
+                              <option value="Vendas">
+                                Vendas
+                              </option>  
+                              
+                              <option value="omercial">
+                                Comwecial 
+                              </option>  
+                              
+                              <option value="Diretoria">
+                                Diretoria 
+                                </option>
+
+                                 <option value="Serviços Gerais">
+                                Serviços Geraos
+                              </option> 
+
+                               <option value="Desenvolvimento">
+                                 Desenvolvimento 
+                              </option> 
+
+                               <option value="Projetos">
+                                Projetos
+                              </option> 
+
+                               <option value="Compras e Suprimentos">
+                                Compras e Suprimentos
+                              </option> 
+
+                               <option value="Atendimento">
+                                Atendimento
+                              </option> 
+
+                               <option value="Meio Ambiente">
+                                Meio Ambiente 
+                              </option> 
+
+                               <option value="Laboratório">
+                                Laboratório 
+                              </option> 
+
+                               <option value="Usinagem">
+                                Usinagem 
+                              </option> 
+
+                               <option value="Corte">
+                                Corte
+                              </option> 
+
+                               <option value="Solda">
+                                 Solda 
+                              </option> 
+
+                               <option value="Manutenção industrial">
+                                 Manutenção industrial
+                              </option> 
+
+                               <option value="Manutenção Elétrica">
+                                Manutenção Elétrica 
+                              </option> 
+
+                               <option value="Manutenção Mecânica">
+                                Manutenção Mecânica 
+                              </option>
+                              
+                               <option value="Ambulatório">
+                                     Ambulatório
+                                </option>
+
+
+
+                </select>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="senha">
+                    Senha
+                </label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+            </div>
+
+
+            <div class="lembrar">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="lembrar"
+                        name="lembrar"
+                    >
+
+                    Lembrar-me
+
+                </label>
+
+            </div>
+
+
+            <div
+                id="mensagem-login"
+                class="mensagem-login">
+            </div>
+
+
+            <button
+                type="submit"
+                id="btn-entrar"
+                class="btn-entrar">
+
+                🔐 Entrar
+
+            </button>
+
+        </form>
+
+
+        <footer class="login-footer">
+
+            <strong>AFM WhatsApp</strong>
+
+            <small>
+                Sistema interno
+            </small>
+
+        </footer>
+
+    </section>
+
+</main>
+
+
+<script src="login.js"></script>
+
+</body>
+
+</html>

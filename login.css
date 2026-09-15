@@ -1,0 +1,438 @@
+/* ============================================================
+   AFM WHATSAPP
+   login.css
+============================================================ */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   PÁGINA
+============================================================ */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #26343c 0%,
+            #111b21 45%,
+            #0b141a 100%
+        );
+
+    color: #ffffff;
+}
+
+/* ============================================================
+   CONTAINER DO LOGIN
+============================================================ */
+
+.login-container {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 20px;
+}
+
+/* ============================================================
+   CAIXA LOGIN
+============================================================ */
+
+.login-box {
+    width: 100%;
+
+    padding: 35px 30px;
+
+    background: #202c33;
+
+    border: 1px solid #2a3942;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45);
+
+    text-align: center;
+}
+
+/* ============================================================
+   LOGO
+============================================================ */
+
+.logo-login {
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+
+    border: 2px solid #25d366;
+
+    box-shadow:
+        0 0 15px rgba(37, 211, 102, 0.25);
+}
+
+/* Caso o HTML use .logo */
+.login-box .logo {
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+}
+
+/* ============================================================
+   TÍTULO
+============================================================ */
+
+.login-box h1 {
+    margin-bottom: 5px;
+
+    font-size: 25px;
+
+    color: #ffffff;
+}
+
+.login-box h2 {
+    margin-bottom: 8px;
+
+    font-size: 22px;
+
+    color: #ffffff;
+}
+
+.login-box p {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+
+    color: #aebac1;
+}
+
+/* ============================================================
+   FORMULÁRIO
+============================================================ */
+
+#form-login {
+    width: 100%;
+
+    text-align: left;
+}
+
+/* ============================================================
+   LABEL
+============================================================ */
+
+#form-login label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #e9edef;
+}
+
+/* ============================================================
+   INPUT / SELECT
+============================================================ */
+
+#form-login input,
+#form-login select {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 13px;
+
+    margin-bottom: 17px;
+
+    border: 1px solid #3b4a54;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #111b21;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+#form-login input::placeholder {
+    color: #8696a0;
+}
+
+#form-login input:focus,
+#form-login select:focus {
+    border-color: #25d366;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 211, 102, 0.12);
+}
+
+/* ============================================================
+   SELECT
+============================================================ */
+
+#form-login select {
+    cursor: pointer;
+}
+
+#form-login select option {
+    background: #202c33;
+
+    color: #ffffff;
+}
+
+/* ============================================================
+   CAMPO SENHA
+============================================================ */
+
+.campo-senha {
+    position: relative;
+
+    width: 100%;
+}
+
+.campo-senha input {
+    padding-right: 50px;
+}
+
+/* Botão mostrar senha */
+#mostrar-senha,
+.btn-mostrar-senha {
+    position: absolute;
+
+    right: 10px;
+    top: 0;
+
+    width: 40px;
+    height: 46px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #aebac1;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+#mostrar-senha:hover,
+.btn-mostrar-senha:hover {
+    color: #25d366;
+}
+
+/* ============================================================
+   LEMBRAR-ME
+============================================================ */
+
+.lembrar {
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 3px 0 20px;
+
+    cursor: pointer;
+}
+
+.lembrar input[type="checkbox"] {
+    width: 17px !important;
+    height: 17px !important;
+
+    margin: 0 !important;
+
+    accent-color: #25d366;
+
+    cursor: pointer;
+}
+
+.lembrar span {
+    color: #aebac1;
+
+    font-size: 13px;
+}
+
+/* ============================================================
+   BOTÃO ENTRAR
+============================================================ */
+
+#btn-entrar {
+    width: 100%;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #25d366;
+
+    color: #071b12;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.1s,
+        box-shadow 0.2s;
+}
+
+#btn-entrar:hover {
+    background: #20bd5a;
+
+    box-shadow:
+        0 5px 18px rgba(37, 211, 102, 0.25);
+}
+
+#btn-entrar:active {
+    transform: scale(0.98);
+}
+
+/* ============================================================
+   MENSAGEM DE ERRO
+============================================================ */
+
+#mensagem-erro,
+.mensagem-erro {
+    min-height: 20px;
+
+    margin: 10px 0;
+
+    text-align: center;
+
+    color: #ff6b6b;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+/* ============================================================
+   MENSAGEM DE SUCESSO
+============================================================ */
+
+.mensagem-sucesso {
+    margin: 10px 0;
+
+    text-align: center;
+
+    color: #25d366;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+/* ============================================================
+   RODAPÉ
+============================================================ */
+
+.login-footer {
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #2a3942;
+
+    color: #8696a0;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+.login-footer strong {
+    color: #25d366;
+}
+
+/* ============================================================
+   RESPONSIVO
+============================================================ */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .login-container {
+        padding: 0;
+    }
+
+    .login-box {
+        padding: 30px 22px;
+    }
+
+    .logo-login,
+    .login-box .logo {
+        width: 78px;
+        height: 78px;
+    }
+
+    .login-box h1 {
+        font-size: 22px;
+    }
+
+}
+
+/* ============================================================
+   ANIMAÇÃO
+============================================================ */
+
+@keyframes aparecerLogin {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+.login-box {
+    animation:
+        aparecerLogin 0.35s ease;
+}
